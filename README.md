@@ -37,6 +37,12 @@ sudo dnf update
 sudo dnf install -y open-vm-tools
 sudo dnf install -y bind-utils sysstat lsof net-tools traceroute nmap wget git tree tcpdump
 ```
+### Extra-Tools
+#### nmon
+```
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+sudo dnf install -y nmon
+```
 
 ### Optional
 ```
