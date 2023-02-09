@@ -30,7 +30,6 @@ sudo passwd myuser
 ```
 sudo usermod -aG wheel myuser
 ```
-and then logout & login again
 
 ### Tools
 ```
