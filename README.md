@@ -57,6 +57,10 @@ UUID=03d5b5fc-5136-42b8-b3be-7ebbd9589fbf /boot                   xfs     defaul
  ```
 sudo vi /etc/selinux/config
 SELINUX=disabled
+
+--- temporary disable
+sudo setenforce 0
+sudo getenforce
  ```
 
 ### Add user
