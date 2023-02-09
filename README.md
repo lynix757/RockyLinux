@@ -68,9 +68,9 @@ sudo dnf install -y scap-security-guide openscap-scanner
 ```
 
 ## Other
-> Docker : https://github.com/lynix757/RockyLinux/blob/main/Docker.md
-> CRI-O : https://github.com/lynix757/RockyLinux/blob/main/crio.md
-> kubernetes : 
+1. Docker : https://github.com/lynix757/RockyLinux/blob/main/Docker.md
+2. CRI-O : https://github.com/lynix757/RockyLinux/blob/main/crio.md
+3. kubernetes : 
 
 
 
