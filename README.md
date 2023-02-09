@@ -59,7 +59,7 @@ sudo dnf install -y scap-security-guide openscap-scanner
 1024+0 records out
 1073741824 bytes (1.1 GB, 1.0 GiB) copied, 0.13844 s, 7.8 GB/s
 ```
-3. Real Disk Read Speed
+3. Actual Disk Read Speed (No Cache)
 - sudo sysctl -w vm.drop_caches=3
 - dd if=tempfile of=/dev/null bs=1M count=1024
 ```
