@@ -1,5 +1,8 @@
-# Bash Generate Password
+# Tools
+
+### Bash Generate Password
 ```
-./genpass.sh {type} {length}
+./genpass.sh {Type} {length}
 ```
-type=abc --> 
+Type = abc --> (A-Za-z0-9)
+Type != abc --> ('A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~')
