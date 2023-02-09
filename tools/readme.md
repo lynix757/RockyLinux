@@ -2,3 +2,4 @@
 ```
 ./genpass.sh {type} {length}
 ```
+type=abc --> 
