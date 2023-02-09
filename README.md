@@ -19,6 +19,28 @@ pvcreate /dev/sdb1
 vgextend centos /dev/sdb1
 lvextend -l +100%FREE /dev/centos/var -r
  ```
+### Disable swap
+ ```
+sudo vi /etcfstab
+
+#
+# /etc/fstab
+# Created by anaconda on Thu Feb  9 09:53:37 2023
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+#
+# After editing this file, run 'systemctl daemon-reload' to update systemd
+# units generated from this file.
+#
+/dev/mapper/rl-root     /                       xfs     defaults        0 0
+UUID=03d5b5fc-5136-42b8-b3be-7ebbd9589fbf /boot                   xfs     defaults        0 0
+/dev/mapper/rl-home     /home                   xfs     defaults        0 0
+/dev/mapper/rl-opt      /opt                    xfs     defaults        0 0
+/dev/mapper/rl-tmp      /tmp                    xfs     defaults        0 0
+/dev/mapper/rl-var      /var                    xfs     defaults        0 0
+#/dev/mapper/rl-swap     none                    swap    defaults        0 0
+ ```
 
 ### Disable SELINUX
  ```
