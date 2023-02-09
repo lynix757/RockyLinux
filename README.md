@@ -1,8 +1,8 @@
-## RockyLinux
+# RockyLinux
 Download Rocky Linux
 https://rockylinux.org/download/
 
-# my Setup (lab on vmware player)
+## my Setup (lab on vmware player)
 ### Disk Partition 
 ```
 - LVM
@@ -12,6 +12,19 @@ https://rockylinux.org/download/
  -- /var  20GB
  -- /tmp  5GB
  ```
+### Disk Extend
+ ```
+fdisk /dev/sdb
+pvcreate /dev/sdb1
+vgextend centos /dev/sdb1
+lvextend -l +100%FREE /dev/centos/var -r
+ ```
+
+### Add user
+```
+sudo adduser myuser
+sudo passwd myuser
+```
 
 ### Enable sudo for myuser
 ```
