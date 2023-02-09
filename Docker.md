@@ -24,6 +24,10 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 ## Play
 ### save image
+```
 docker save -o name.tar image-name:tag
+```
 ### load image
+```
 docker load < name.tar
+```
