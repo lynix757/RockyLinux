@@ -20,6 +20,12 @@ vgextend centos /dev/sdb1
 lvextend -l +100%FREE /dev/centos/var -r
  ```
 
+### Disable SELINUX
+ ```
+sudo vi /etc/selinux/config
+SELINUX=disabled
+ ```
+
 ### Add user
 ```
 sudo adduser myuser
