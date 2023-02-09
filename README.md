@@ -19,6 +19,17 @@ pvcreate /dev/sdb1
 vgextend centos /dev/sdb1
 lvextend -l +100%FREE /dev/centos/var -r
  ```
+ 
+### Set Date/Time
+ ```
+sudo timedatectl set-timezone Asia/Bangkok
+ ```
+
+### Set Hostname
+ ```
+sudo hostnamectl set-hostname what-your-name.your-domain.com
+ ```
+
 ### Disable swap
  ```
 sudo vi /etcfstab
