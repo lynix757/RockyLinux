@@ -48,8 +48,22 @@ sudo dnf install -y open-vm-tools
  
 ### Set Date/Time
  ```
+timedatectl
+timedatectl list-timezones
+
 sudo timedatectl set-timezone Asia/Bangkok
+timedatectl status
+
+# custom ntp-server
+sudo vi /etc/chrony.conf
+sudo systemctl restart chronyd
+ 
+# verify
+date
+timedatectl status
  ```
+ > Info : https://www.vultr.com/docs/how-to-set-the-timezone-and-configure-ntp-on-rocky-linux/
+ 
  
 ### Set Hostname
  ```
