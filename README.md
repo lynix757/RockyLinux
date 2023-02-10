@@ -19,12 +19,38 @@ pvcreate /dev/sdb1
 vgextend centos /dev/sdb1
 lvextend -l +100%FREE /dev/centos/var -r
  ```
+### Work with CDROM and Install vmware-tools
+ ```
+# Check Device id
+blkid
+
+sudo mkdir /mnt/cdrom
+sudo mount /dev/sr0 /mnt/cdrom
+
+cp /mnt/cdrom/VMwareTools-10.3.25-20206839.tar.gz /tmp/
+cd /tmp
+tar -zxvf VMwareTools-10.3.25-20206839.tar.gz
+cd vmware-tools-distrib/
+sudo ./vmware-install.pl
+
+# Cleanup
+sudo umount /mnt/cdrom
+cd
+rm /tmp/VMwareTools-10.3.25-20206839.tar.gz
+rm -rf /tmp/vmware-tools-distrib
+ ```
+> Info : https://kb.vmware.com/s/article/1018414
+> 
+### Or vmware-tools by open-vm-tools
+ ```
+sudo dnf install -y open-vm-tools
+ ```
  
 ### Set Date/Time
  ```
 sudo timedatectl set-timezone Asia/Bangkok
  ```
-
+ 
 ### Set Hostname
  ```
 sudo hostnamectl set-hostname what-your-name.your-domain.com
@@ -77,7 +103,6 @@ sudo usermod -aG wheel myuser
 ### Tools
 ```
 sudo dnf update
-sudo dnf install -y open-vm-tools
 sudo dnf install -y bind-utils sysstat lsof net-tools traceroute nmap wget git tree tcpdump
 ```
 ### Extra-Tools
