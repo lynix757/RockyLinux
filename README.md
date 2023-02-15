@@ -119,7 +119,7 @@ sudo usermod -aG wheel myuser
 ### Tools
 ```
 sudo dnf update
-sudo dnf install -y bind-utils sysstat lsof net-tools traceroute nmap wget git tree tcpdump
+sudo dnf install -y bind-utils sysstat lsof net-tools traceroute nmap wget git tree tcpdump jq
 sudo dnf -y install openldap-clients
 ```
 ### Extra-Tools
